@@ -1,0 +1,418 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap');
+
+/* Root Variables for Color Theme */
+:root {
+    --primary-color: #1E3A8A; /* Deep Blue */
+    --secondary-color: #06B6D4; /* Bright Cyan */
+    --accent-color: #8B5CF6; /* Electric Purple */
+    --background-gradient: linear-gradient(135deg, #1F2937 0%, #F3F4F6 100%);
+    --text-color: #F3F4F6; /* Light Gray */
+    --header-bg: #1F2937; /* Dark background for header */
+    --footer-bg: #111827; /* Darker footer */
+    --card-bg: #1F2937; /* Dark background for cards */
+    --border-radius: 0.75rem;
+}
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: var(--background-gradient);
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Header Section */
+header {
+    background-color: var(--header-bg);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 6rem 2rem;
+    background-image: url('assets/hero-bg.png'); /* Add a techy background image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 58, 138, 0.7); /* Overlay for better text visibility */
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 1;
+    position: relative;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    color: #D1D5DB; /* Slightly lighter text */
+    z-index: 1;
+    position: relative;
+}
+
+/* Projects Section */
+#projects {
+    padding: 4rem 2rem;
+    background-color: #1F2937; /* Dark background */
+}
+
+#projects h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.project-card a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+}
+
+.project-image {
+    height: 200px;
+    background-size: contain; /* Ensure full image display */
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.3s;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05);
+}
+
+.project-info {
+    padding: 1.5rem;
+    background-color: #1F2937;
+}
+
+.project-info h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
+    color: var(--secondary-color);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.project-info p {
+    font-size: 1rem;
+    color: #D1D5DB;
+    transition: color 0.3s ease;
+}
+
+.project-info p:hover {
+    color: var(--secondary-color);
+}
+
+/* Team Section */
+#team {
+    padding: 4rem 2rem;
+    background-color: #111827; /* Dark background */
+}
+
+#team h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.team-member {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.circle h3 {
+    color: #fff;
+    font-size: 1rem;
+    margin: 0;
+    padding-bottom: 5px;
+    transition: opacity 0.3s;
+}
+
+.circle p {
+    color: #fff;
+    font-size: 0.9rem;
+    margin: 0;
+    transition: opacity 0.3s;
+}
+
+.circle img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.circle:hover img {
+    opacity: 1;
+}
+
+.circle:hover h3, .circle:hover p {
+    opacity: 0;
+}
+
+.circle:hover {
+    transform: scale(1.1);
+}
+
+/* Enhanced Footer Styling */
+footer {
+    background-color: var(--footer-bg);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-info a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-info a:hover {
+    color: var(--accent-color);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    display: inline-block;
+    color: white;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.social-icons svg {
+    width: 30px;
+    height: 30px;
+}
+
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Button Styling */
+button, .project-card a {
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover, .project-card a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyframes for Fade-In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Apply Fade-In to Sections */
+.hero, #projects, #team, #contact {
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
+}
+
+.hero {
+    animation-delay: 0.3s;
+}
+
+#projects {
+    animation-delay: 0.5s;
+}
+
+#team {
+    animation-delay: 0.7s;
+}
+
+#contact {
+    animation-delay: 0.9s;
+}
+
+/* Team Member Hover Animation */
+.circle {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2000; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 2rem;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 700px;
+    border-radius: var(--border-radius);
+    position: relative;
+    animation: fadeInModal 0.5s;
+}
+
+@keyframes fadeInModal {
+    from {opacity: 0; transform: translateY(-50px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Project Preview Image */
+.modal-content img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: var(--border-radius);
+}
