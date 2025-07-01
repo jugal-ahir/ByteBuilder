@@ -41,21 +41,26 @@
   }
 }
 
-.byte-rain-matrix-bg {
+.byte-rain-video-bg {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  min-height: 100vh;
-  pointer-events: none;
-  background: transparent;
   z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
 }
 
-.byte-rain-matrix-bg canvas {
-  display: block;
-  width: 100vw !important;
-  height: 100vh !important;
-  background: transparent;
+.byte-rain-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: lighten;
 } 

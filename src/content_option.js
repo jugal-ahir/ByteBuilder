@@ -1,4 +1,8 @@
 import profileImg from './assets/images/react-porfolio.png';
+import ceoportfolioImg from './assets/images/ceoportfolio.png';
+import bytecopiedImg from './assets/images/bytecopied.png';
+import bytesyncedImg from './assets/images/bytesynced.png';
+import bytecontestImg from './assets/images/bytecontest.png';
 
 const logotext = "BYTEBUILDER";
 const meta = {
@@ -74,73 +78,33 @@ const services = [
     },
   ];
 
-const dataportfolio = [{
-        img: "https://picsum.photos/400/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/800/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/600/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/300/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/700/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-
-    {
-        img: "https://picsum.photos/400/600/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/300/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/550/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/700/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
+const dataportfolio = [
+  {
+    img: ceoportfolioImg,
+    description: "CEO Portfolio: The personal portfolio of Jugal Vaghmashi, showcasing skills, experience, and projects. A modern, interactive developer portfolio.",
+    link: "https://byte-folio.netlify.app/",
+  },
+  {
+    img: bytecopiedImg,
+    description: "ByteCopied: A code snippet management app with download code facility in PDF format, inactive student check facility for admin dashboard, and integrated with our web apps like ByteSynced and ByteContest.",
+    link: "https://jugal-ahir.github.io/ByteCopied/",
+  },
+  {
+    img: bytesyncedImg,
+    description: "ByteSynced: A real-time collaboration platform designed for seamless team coding, project management, and live execution. Provides a synchronized, smart, and interactive environment for developers, educators, and students.",
+    link: "https://byte-synced.vercel.app/",
+  },
+  {
+    img: bytecontestImg,
+    description: "ByteContest: A comprehensive online coding contest platform built with React, TypeScript, Node.js, and MongoDB.",
+    link: "https://github.com/jugal-ahir/ByteContest",
+  },
 ];
 
 const contactConfig = {
     YOUR_EMAIL: "vaghmashijugal@gmail.com",
     YOUR_FONE: "+91 7405222505",
-    description: "Have a project in mind or want to collaborate? Reach out to ByteBuilder—we’re always excited to connect and help bring your ideas to life!",    // creat an emailjs.com account 
+    description: "Have a project in mind or want to collaborate? Reach out to ByteBuilder—we're always excited to connect and help bring your ideas to life!",    // creat an emailjs.com account 
     // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
     YOUR_SERVICE_ID: "service_jd5k67h",
     YOUR_TEMPLATE_ID: "template_69tl3u9",

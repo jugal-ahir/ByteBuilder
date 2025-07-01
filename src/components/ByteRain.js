@@ -17,15 +17,15 @@ const ByteRain = () => {
     canvas.height = height;
 
     let columns = Math.floor(width / FONT_SIZE);
-    let drops = Array(columns).fill(1);
+    let rows = Math.floor(height / FONT_SIZE);
+    let drops = Array.from({ length: columns }, () => Math.random() * rows);
 
     // Slow down the rain by updating only every N frames
     let frame = 0;
     const FRAME_SKIP = 6; // Higher = slower
-    const DROP_SPEED = 0.25; // Fractional increment for smoothness
+    const DROP_SPEED = 0.5; // Slightly faster rain
 
     function draw() {
-      // No background fill, just clear the canvas
       ctx.clearRect(0, 0, width, height);
       ctx.font = `${FONT_SIZE}px 'Fira Mono', monospace`;
       ctx.shadowColor = "#00ff41";
@@ -58,7 +58,8 @@ const ByteRain = () => {
       canvas.width = width;
       canvas.height = height;
       columns = Math.floor(width / FONT_SIZE);
-      drops = Array(columns).fill(1);
+      rows = Math.floor(height / FONT_SIZE);
+      drops = Array.from({ length: columns }, () => Math.random() * rows);
     }
     window.addEventListener("resize", handleResize);
 
