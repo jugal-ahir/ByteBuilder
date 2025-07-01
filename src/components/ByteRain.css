@@ -81,4 +81,9 @@
   width: 100vw !important;
   height: 100vh !important;
   background: transparent;
+}
+
+.stick_follow_icon {
+  z-index: 10;
+  position: fixed;
 } 
