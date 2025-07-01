@@ -1,0 +1,61 @@
+.byte-rain-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  background: transparent;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.byte-column {
+  position: absolute;
+  top: 0;
+  width: 6%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.byte {
+  color: #00ffea;
+  font-family: 'Fira Mono', monospace;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  margin: 2px 0;
+  animation: byte-fall 2.5s linear infinite;
+}
+
+@keyframes byte-fall {
+  0% {
+    transform: translateY(-120px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+}
+
+.byte-rain-matrix-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  pointer-events: none;
+  background: transparent;
+  z-index: 0;
+}
+
+.byte-rain-matrix-bg canvas {
+  display: block;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: transparent;
+} 
